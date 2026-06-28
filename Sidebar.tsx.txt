@@ -1,0 +1,16 @@
+import { AlertTriangle, Shield, HeartPulse, Building2, TreeDeciduous, Dog, Recycle } from 'lucide-react';
+
+export default function Sidebar() {
+  return (
+    <aside className="w-64 bg-[#1a1c24] h-screen p-4 border-r border-gray-800 text-white">
+      <div className="space-y-4">
+        <h2 className="text-xl font-bold mb-6">INDICADORES</h2>
+        {['Riesgos Ambientales', 'Factores de Vulnerabilidad', 'Salud y Servicios', 'Centros de Refugio', 'Gestión Forestal', 'Control Animal', 'Gestión de Reciclaje'].map((item) => (
+          <div key={item} className="flex items-center gap-3 p-3 hover:bg-gray-800 rounded-lg cursor-pointer transition">
+            <span className="text-sm font-medium">{item}</span>
+          </div>
+        ))}
+      </div>
+    </aside>
+  );
+}

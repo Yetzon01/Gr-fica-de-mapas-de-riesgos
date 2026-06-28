@@ -1,0 +1,16 @@
+import Sidebar from './components/Sidebar';
+
+export default function Dashboard() {
+  return (
+    <div className="flex bg-[#0f1117] min-h-screen text-white">
+      <Sidebar />
+      <main className="flex-1 p-8">
+        <h1 className="text-3xl font-bold">Dashboard - Riesgos Comunitarios</h1>
+        <div className="mt-8 grid grid-cols-2 gap-6">
+          <div className="h-64 bg-[#1a1c24] rounded-xl p-4 border border-gray-700">Gráfica de Barras</div>
+          <div className="h-64 bg-[#1a1c24] rounded-xl p-4 border border-gray-700">Gráfica de Pastel</div>
+        </div>
+      </main>
+    </div>
+  );
+}
