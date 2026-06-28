@@ -1,5 +1,6 @@
 import Sidebar from './components/Sidebar';
-import BarChartComponent from './components/BarChartComponent'; // Importa el componente
+import BarChartComponent from './components/BarChartComponent';
+import DonutChartComponent from './components/DonutChartComponent'; // Importa la nueva
 
 export default function Dashboard() {
   return (
@@ -8,9 +9,11 @@ export default function Dashboard() {
       <main className="flex-1 p-8">
         <h1 className="text-3xl font-bold mb-8">Dashboard - Riesgos Comunitarios</h1>
         
-        {/* Aquí insertamos la gráfica */}
-        <BarChartComponent /> 
-        
+        {/* Usamos un grid para ponerlas una al lado de la otra */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <BarChartComponent />
+          <DonutChartComponent />
+        </div>
       </main>
     </div>
   );
